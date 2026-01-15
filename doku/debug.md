@@ -1,5 +1,5 @@
 
-
+```
 sudo sysctl -w net.ipv4.ip_forward=1
 
 echo "net.ipv4.ip_forward=1" | sudo tee -a /etc/sysctl.conf
@@ -14,5 +14,6 @@ sudo nft add rule nat postrouting oifname "eth0" masquerade
 
 sudo nft list ruleset > /etc/nftables.conf
 sudo systemctl enable --now nftables
+```
 
 Dann kann man von beliebigen PCs im Netzwerk des Pi, den Smartmeter ansprechen.
